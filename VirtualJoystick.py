@@ -134,6 +134,7 @@ class JoystickApp:
     def stop_transmitting(self):
         # Stop transmitting joystick coordinates
         self.transmitting = False
+        self.serial_port.close()
 
     def draw_joystick(self):
         # Draw the joystick at its current position
